@@ -1,0 +1,144 @@
+.markItUp .h1 a {
+    background-image:url(images/text_heading_1.png);
+}
+.markItUp .h2 a {
+    background-image:url(images/text_heading_2.png);
+}
+.markItUp .h3 a {
+    background-image:url(images/text_heading_3.png);
+}
+.markItUp .h4 a {
+    background-image:url(images/text_heading_4.png);
+}
+.markItUp .h5 a {
+    background-image:url(images/text_heading_5.png);
+}
+.markItUp .h6 a {
+    background-image:url(images/text_heading_6.png);
+}
+.markItUp .paragraph a {
+    background-image:url(images/paragraph.png);
+}
+
+.markItUp .bold a {
+    background-image:url(images/text_bold.png);
+}
+.markItUp .italic a {
+    background-image:url(images/text_italic.png);
+}
+.markItUp .stroke a {
+    background-image:url(images/text_strikethrough.png);
+}
+.markItUp .underline a {
+    background-image:url(images/text_underline.png);
+}
+
+.markItUp .ul a {
+    background-image:url(images/list-bullet.png);
+}
+.markItUp .ol a {
+    background-image:url(images/list-numeric.png);
+}
+.markItUp .li a {
+    background-image:url(images/list-item.png);
+}
+
+.markItUp .image a {
+    background-image:url(images/picture.png);
+}
+.markItUp .link a {
+    background-image:url(images/link_add.png);
+}
+
+.markItUp .clean a {
+    background-image:url(images/clean.png);
+}
+
+.markItUp .encodechars a {
+    background-image:url(images/script_delete.png);
+}
+
+.markItUp .tablegenerator a {
+    background-image:url(images/table-q.png);
+}
+
+.markItUp .table a {
+    background-image:url(images/table.png);
+}
+.markItUp .table-col a {
+    background-image:url(images/table-col.png);
+}
+.markItUp .table-row a {
+    background-image:url(images/table-row.png);
+}
+.markItUp .modx a {
+    background-image:url(images/modx.png);
+}
+.markItUp .modx .modx-sitename a{
+    background-image:url(images/application_home.png);
+}
+.markItUp .modx .modx-assets a{
+    background-image:url(images/folder.png);
+}
+.markItUp .modx .modx-pagetitle a{
+    background-image:url(images/page.png);
+}
+.markItUp .modx .modx-longtitle a{
+    background-image:url(images/page_green.png);
+}
+.markItUp .modx .modx-link a{
+    background-image:url(images/page_link.png);
+}
+.markItUp .modx .modx-id a{
+    background-image:url(images/application_form_magnify.png);
+}
+.markItUp .css a {
+    background-image:url(images/css.png);
+}
+.markItUp .class a{
+    background-image:url(images/css_add.png);
+}
+
+
+.markItUp .alignments a {
+    background-image:url(images/text_align_left.png);
+}
+.markItUp .alignments .left a {
+    background-image:url(images/text_align_left.png);
+}
+.markItUp .alignments .center a {
+    background-image:url(images/text_align_center.png);
+}
+.markItUp .alignments .right a {
+    background-image:url(images/text_align_center.png);
+}
+.markItUp .alignments .justify a {
+    background-image:url(images/text_align_justify.png);
+}
+.markItUp .padding a {
+    background-image:url(images/text_padding_left.png);
+}
+.markItUp .padding .left a {
+    background-image:url(images/text_padding_left.png);
+}
+.markItUp .padding .top a {
+    background-image:url(images/text_padding_top.png);
+}
+.markItUp .padding .right a {
+    background-image:url(images/text_padding_right.png);
+}
+.markItUp .padding .bottom a {
+    background-image:url(images/text_padding_bottom.png);
+}
+.markItUp  .quote a{
+    background-image:url(images/quotes.png);
+}
+.markItUp .code a {
+    background-image:url(images/script_code.png);
+}
+.markItUp .spelling a {
+    background-image:url(images/spelling.png);
+}
+.markItUp .spellingoptions a{
+    background-image:url(images/spellingoptions.png);
+}
