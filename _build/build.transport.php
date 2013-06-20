@@ -40,7 +40,7 @@ $modx->setLogTarget('ECHO');
  
 $modx->loadClass('transport.modPackageBuilder','',false, true);
 $builder = new modPackageBuilder($modx);
-$builder->createPackage(PKG_NAMESPACE,PKG_VERSION,PKG_RELEASE);
+$builder->createPackage(PKG_NAME,PKG_VERSION,PKG_RELEASE);
 $builder->registerNamespace(PKG_NAMESPACE,false,true,'{core_path}components/'.PKG_NAMESPACE.'/');
  
 /* create the plugin object */
