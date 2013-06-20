@@ -143,13 +143,11 @@ class markitup
             $this->mainLoad()->speller();
             $this->_ajaxload = true;
         }
-
+		
         $this->addHtml('<script>
             Ext.onReady(function() {
                 ' . $this->getScript('main') . '
-            });
-            MODx.afterTVLoad = function() {
-                ' . $this->getScript('tv') . '
+				' . $this->getScript('tv') . '
             };
         </script>');
         return $this;
