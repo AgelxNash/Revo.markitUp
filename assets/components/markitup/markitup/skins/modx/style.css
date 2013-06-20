@@ -17,6 +17,9 @@
 .markItUpContainer  {
     font:11px Verdana, Arial, Helvetica, sans-serif;
 }
+.markItUpHeader{
+	float:left;
+}
 .markItUpEditor {
     font:12px 'Courier New', Courier, monospace;
     padding:5px;
