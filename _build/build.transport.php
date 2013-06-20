@@ -1,8 +1,8 @@
 <?php
 /**
- * Ace build script
+ * MarkitUp build script
  *
- * @package ace
+ * @package markitup
  * @subpackage build
  */
  
@@ -62,11 +62,6 @@ if (is_array($events) && !empty($events)) {
 }
 unset($events);
 
-/* load plugin properties */
-//$properties = include $sources['data'].'properties.inc.php';
-//$plugin->setProperties($properties);
-//$modx->log(xPDO::LOG_LEVEL_INFO,'Setting '.count($properties).' Plugin Properties.'); flush();
-
 $attributes= array(
     xPDOTransport::UNIQUE_KEY => 'name',
     xPDOTransport::PRESERVE_KEYS => false,
@@ -122,9 +117,6 @@ $builder->setPackageAttributes(array(
     'license' => file_get_contents($sources['documents'] . 'license.txt'),
     'readme' => file_get_contents($sources['documents'] . 'readme.txt'),
     'changelog' => file_get_contents($sources['documents'] . 'changelog.txt')
-   // 'setup-options' => array(
-   //     'source' => $sources['build'].'setup.options.php',
-   // ),
 ));
  
 /* zip up package */

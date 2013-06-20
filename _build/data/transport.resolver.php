@@ -1,16 +1,16 @@
 <?php
 /**
- * Ace Source Editor for MODx Revolution
+ * MarkitUp Document Editor for MODx Revolution
  *
- * @author Danil Kostin <danya@postfactum@gmail.com>
+ * @author Borisov Evgeniy <modx@agel-nash.ru>
  *
- * @package ace
+ * @package markitup
  */
 
 /**
- * Resolver to set which_editor to Ace
+ * Resolver to set which_editor to MarkitUp
  * 
- * @package ace
+ * @package markitup
  * @subpackage build
  */
 $success= true;
@@ -19,7 +19,7 @@ if ($pluginid= $object->get('id')) {
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         case xPDOTransport::ACTION_UPGRADE:
             // remove obsolete plugin properties and files
-			$plugin = $object->xpdo->getObject('modPlugin', array('name' => 'MarkitUp!'));
+			$plugin = $object->xpdo->getObject('modPlugin', array('name' => PKG_NAME));
             if ($plugin) {
 				$object->xpdo->log(xPDO::LOG_LEVEL_INFO,'Attempting to clear obsolete plugin properties.');
                 $plugin->setProperties(array());

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package imperavi
+ * @package markitup
  */
 class markitup{
 
