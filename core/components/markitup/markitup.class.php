@@ -192,7 +192,7 @@ class markitup
      */
     protected function getScript($mode = 'main')
     {
-        $script = isset($this->_script[$mode]) ? $this->_script[$mode] : '';
+        $script = isset($this->_script[$mode]) ? $this->_script[$mode] : array();
         return implode("\r\n", $script);
     }
 
