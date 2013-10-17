@@ -50,7 +50,9 @@ class markitup
             'corePath' => $this->getOption($this->optName('core_path'), null, $this->getOption('core_path', null, MODX_CORE_PATH) . 'components/markitup/'),
             'assetsUrl' => $this->getOption($this->optName('assets_url'), null, $this->getOption('assets_url', null, MODX_ASSETS_URL) . 'components/markitup/'),
             'editorSettings' => $this->getOption($this->optName('settings'), null, ''),
-            'editorSkin' => trim(trim($this->getOption($this->optName('skin'), null, 'modx')), '/')
+            'editorSkin' => trim(trim($this->getOption($this->optName('skin'), null, 'modx')), '/'),
+			'loadJquery' => $this->getOption($this->optName('loadJquery'), null, '1'),
+			'AjaxManager' => $this->getOption($this->optName('AjaxManager'), null, '1'),
         );
 
         $this->lexiconLoad($this->optName(':default',':'));
@@ -65,16 +67,21 @@ class markitup
     {
         $this->addLexicon( //Подгрузка лексикона
             $this->optName('default',':')
-        )->addJS( //Путь к jQuery http://code.jquery.com/jquery-1.8.0.min.js
+        );
+		
+		if($this->_cfg['loadJquery']){
+			$this->addJS( //Путь к jQuery http://code.jquery.com/jquery-1.8.0.min.js
                 $this->getOption($this->optName('jquery'), '', $this->_cfg['assetsUrl'] . 'jquery/1.8.3.min.js')
-            )->addJS( //От куда грузить редактор http://markitup.jaysalvat.com/examples/markitup/jquery.markitup.js
+			);
+		}
+		
+		$this->addJS( //От куда грузить редактор http://markitup.jaysalvat.com/examples/markitup/jquery.markitup.js
                 $this->getOption($this->optName('editorjs'), '', $this->_cfg['assetsUrl'] . 'markitup/jquery.markitup.js')
             )->addCSS( //Стили самого редактора
                 $this->_cfg['assetsUrl'] . 'markitup/skins/' . $this->_cfg['editorSkin'] . '/style.css'
             )->addCSS( //Стили кнопок. Нужно заранее озвучить какие классы имеются в наличии
                 $this->getOption($this->optName('css_button'), '', $this->_cfg['assetsUrl'] . 'markitup/sets/full/style.css')
             );
-
         //Произвольный JavaScript для каллбеков. Скрипты разделяются символом ###
         $customJs = $this->getOption($this->optName('custom_js'), '', '');
         if (!empty($customJs)) {
@@ -148,7 +155,7 @@ class markitup
             Ext.onReady(function() {
                 ' . $this->getScript('main') . '
 				' . $this->getScript('tv') . '
-            };
+            });
         </script>');
         return $this;
     }
@@ -289,8 +296,11 @@ class markitup
      */
     private function addJS($element)
     {
-        //$this->_modx->regClientStartupScript($element)
-        $this->_modx->controller->addJavascript($element);
+		if($this->_cfg['AjaxManager']){
+			$this->_modx->controller->addJavascript($element);
+		}else{
+			$this->_modx->regClientStartupScript($element);
+		}
         return $this;
     }
 

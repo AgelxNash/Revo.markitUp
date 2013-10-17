@@ -85,3 +85,7 @@ $_lang['markitup.speller_lang'] = 'Language Spelling';
 $_lang['markitup.speller_lang_desc'] = 'The default is the current setting MODX Revolution, but you can force the point. The following languages​​: ru - Russian, uk - Ukrainian, en - English. Note that the interface itself of spell check without changing its language layout.';
 $_lang['markitup.settings_ta'] = 'The settings for the primary editor';
 $_lang['markitup.settings_ta_desc'] = 'Configure the primary editor of the document. For TV-parameters must create the markitup.settings_tv №. Where is the ID number of your TV setting';
+$_lang['markitup.AjaxManager'] = 'Combine all JavaScript files into one file';
+$_lang['markitup.AjaxManager_desc'] = 'Combines all JavaScript files into one file';
+$_lang['markitup.loadJquery'] = 'Load the library jQuery?';
+$_lang['markitup.loadJquery_desc'] = 'Allows you to disable loading of jQuery library';
