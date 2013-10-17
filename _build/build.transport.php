@@ -12,7 +12,7 @@ set_time_limit(0);
 /* define version */
 define('PKG_NAME','MarkitUp');
 define('PKG_NAMESPACE','markitup');
-define('PKG_VERSION','0.0.4');
+define('PKG_VERSION','0.0.5');
 define('PKG_RELEASE','pl');
  
 /* define sources */
